@@ -1,7 +1,23 @@
 .footer {
-    background-color: var(--header-bgc-color);
-    padding: 60px 0;
+  background-color: var(--header-bgc-color);
+  padding: 60px 0;
+
+}
+.footer--container {
+  @media screen and (min-width:1200px) {
+    @include flex(flex, row, null, null, baseline);
   }
-  .footer--container {
-    @include flex(flex, null, null, null, baseline);
+}
+.footer__mob-tab{
+  @include flex(flex, column, null, null, center);
+  margin-bottom: 60px;
+
+
+  @media screen and (min-width:768px) {
+    @include flex(flex, row, null, space-around, baseline);
+    margin-bottom: 60px;
   }
+   @media screen and (min-width:1200px){
+     margin-bottom: 0;
+   }
+}

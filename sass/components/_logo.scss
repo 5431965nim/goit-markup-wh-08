@@ -1,19 +1,41 @@
 //-------------Header//
+.logo_container{
+  @media screen and (max-width:767px) {
+    margin-bottom: 60px;    
+  }
+  & .logo {
+  padding: 0;
+  margin-bottom: 20px;
+}
+}
+ 
 .logo {
-    display: block;
-    padding-top: 24px;
-    padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+  text-align: center;
+  @include font(Raleway, 24px, 700, 1.17, 0.03em, var(--accent-color), null, none);
+  @media screen and (min-width:1200px) {
     @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--accent-color), null, none);
+    text-align: left;
   }
-  .logo__primary {
-    @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--logo-primary-color), null, null);
+  @media screen and(min-width:768px) {
+    padding-bottom: 26px;
+    padding-top: 26px;
+
   }
-  //---------------Footer//
-  
-  .logo__secondary {
-    @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--primary-white-color), null, null);
+}
+.logo__primary {
+  @include font(Raleway, 24px, 700, 1.17, 0.03em, var(--logo-primary-color), null, null);
+  @media screen and (min-width:1200px) {
+    @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--logo-primary-color), null, none);
   }
-  .logo_container .logo {
-    padding: 0;
-    margin-bottom: 20px;
+}
+//---------------Footer//
+
+.logo__secondary {
+  @include font(Raleway, 24px, 700, 1.17, 0.03em, var(--primary-white-color), null, null);
+  @media screen and (min-width:1200px) {
+    @include font(Raleway, 26px, 700, 1.2, 0.03em, var(--primary-white-color), null, none);
   }
+}

@@ -1,22 +1,32 @@
 .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 77px 24px;   
+  overflow-y: auto; 
+
+  background-color: var(--overflow-bgc-color);
+
+  transform: translateY(+101%);
+  @include transition(transform, null, null, var(--time), var(--timing-function));
+
+  .card__link:hover &,
+  .card__link:focus & {
+    transform: translateY(0);
+  }
+
+  @media scree and (min-width:768px){
+    padding: 49px 24px;
+  }
+
+  @media scree and (min-width:1200px) {
     padding: 63px 24px;
-  
-    background-color: var(--overflow-bgc-color);
-  
-    transform: translateY(+101%);
-    @include transition(transform, null, null, var(--time), var(--timing-function));
-  
-    .card__link:hover &,
-    .card__link:focus & {
-      transform: translateY(0);
-    }
   }
-  .overlay__caption {
-    @include font(Roboto, 18px, 400, 1.56, 0.03em, var(--primary-white-color), null, null);
-  }
+
+}
+.overlay__caption {
+  @include font(Roboto, 18px, 400, 1.56, 0.03em, var(--primary-white-color), null, null);
+}
   
